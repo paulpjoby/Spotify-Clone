@@ -53,8 +53,6 @@ class HomeFragment: Fragment(
                 Status.SUCCESS -> {
                     allSongsProgressBar.isVisible = false
                     result.data?.let{ songs ->
-                        Log.e("Song sizexx ", ""+ songs.size)
-                        Log.e("Song succ", ""+ songs.size)
                         songAdapter.songs = songs
                     }
                 }

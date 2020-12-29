@@ -19,9 +19,7 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class) // Live as long as our app lives
 object AppModule {
 
-    /*
-        Single instance of glide need to be created so we use @Singleton
-    */
+    //Single instance of glide need to be created so we use @Singleton
     @Singleton
     @Provides
     fun provideGlideInstance(
@@ -35,7 +33,6 @@ object AppModule {
                 .diskCacheStrategy(DiskCacheStrategy.DATA) // Cached
         )
     }
-
 
     @Singleton
     @Provides

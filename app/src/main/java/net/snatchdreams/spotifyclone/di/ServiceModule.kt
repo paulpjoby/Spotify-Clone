@@ -45,6 +45,7 @@ object ServiceModule {
         @ApplicationContext context: Context
     ) : DefaultDataSourceFactory
     {
-        return DefaultDataSourceFactory(context, Util.getUserAgent(context, "Spofitfy App"))
+        return DefaultDataSourceFactory(context, Util.getUserAgent(context,
+            "Spofitfy App"))
     }
 }
