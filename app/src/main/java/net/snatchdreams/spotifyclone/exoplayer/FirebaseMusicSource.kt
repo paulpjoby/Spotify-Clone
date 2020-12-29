@@ -26,7 +26,7 @@ class FirebaseMusicSource @Inject constructor(
         withContext(Dispatchers.IO){
             state = State.STATE_INITIALIZING
             val allSong = musicDatabase.getAllSongs()
-            Log.e("Song size", ""+ allSong.size)
+
             songs = allSong.map { song ->
                 MediaMetadataCompat.Builder()
                     .putString(MediaMetadataCompat.METADATA_KEY_ARTIST, song.subtitle)
